@@ -1,0 +1,43 @@
+<!doctype html>
+{% assign lang=page.lang | default: 'ru' %}
+<html lang="{{ lang }}">
+
+	{% include head.html %}
+
+	<script src="{{ '/assets/zenscroll.js' | prepend: site.baseurl }}" async defer></script>
+	<script src="{{ "/assets/aos.js" | prepend: site.baseurl }}" async defer></script>
+
+	<body class="page {{ layout.type }}">
+		{% include header.html %}
+
+		<main class="site-content">
+			{{ content }}
+		</main>
+
+		{% include footer.html %}
+
+	</body>
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//animate on scroll
+			AOS.init({
+				easing: 'ease-in-out-sine',
+				offset: -50,
+				duration: 1000
+			});
+		})
+	</script>
+
+	<link rel="stylesheet" href="{{ "/assets/normalize.css" | prepend: site.baseurl }}">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="{{ "/assets/index.css" | prepend: site.baseurl }}">
+
+	<link rel="stylesheet" href="{{ "/assets/font-awesome.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/assets/swiper.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ '/assets/aos.css' | prepend: site.baseurl }}">
+
+
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDh1gTWO5V-HZl2T_9iXLCDPcuLt8aXNc&callback=initMap" async defer></script>
+	<script src="{{ "/assets/swiper.js" | prepend: site.baseurl }}" async defer></script>
+</html>

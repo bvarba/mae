@@ -1,0 +1,25 @@
+{
+  "name": "proakpp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jekyll build",
+    "start": "jekyll build",
+    "build": "jekyll build",
+    "watch": "jekyll build --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfcreative/proakpp.git"
+  },
+  "author": "ΔY <dfcreative@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfcreative/proakpp/issues"
+  },
+  "homepage": "https://github.com/dfcreative/proakpp#readme",
+  "dependencies": {
+    "swiper": "^3.4.1"
+  }
+}

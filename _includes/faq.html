@@ -1,0 +1,18 @@
+<section id="faq" class="section section--faq section--gray">
+<div class="centered">
+	<header class="section-header">
+		<h3 class="section-title">
+			Часто задаваемые вопросы
+		</h3>
+		<hr class="section-dash"/>
+		<div class="section-subtitle">
+
+		</div>
+	</header>
+	<div class="section-body">
+		{% for post in site.posts %}
+			{% if post.id == '/faq' %}{{ post.content }}{% endif %}
+		{% endfor %}
+	</div>
+</div>
+</section>

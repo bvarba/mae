@@ -1,0 +1,85 @@
+title:
+  en: PROAKPP
+  ru: ПРОАКПП
+tagline:
+  en:
+  ru:
+index:
+  en: index-en.html
+  ru: index.html
+email: proakpp@mail.com
+description:
+  en:
+  ru:
+baseurl: ""
+url: "http://proakpp.ru"
+twitter_username: proakpp
+github_username:  proakpp
+permalink: :title
+
+markdown: kramdown
+
+kramdown:
+  parse_block_html: true
+
+defaults:
+    - {scope: {path: ""}, values: {layout: "post"}}
+
+prose:
+  rooturl: '_posts'
+  siteurl: 'http://proakpp.ru'
+  media: 'assets'
+  ignore: ['CNAME', '_config.yml', '*.json', '.gitignore', 'readme.md', '*.xml', 'admin.html']
+  metadata:
+    _posts:
+      - name: "lang"
+        field:
+          element: "text"
+          label: "Language"
+          help: "en or ru"
+          value: "ru"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          type: "text"
+      - name: "image"
+        field:
+          element: "text"
+          label: "Image"
+          help: "The image will be used as a background cover for the post. Can be absolute or relative URL."
+          placeholder: "img/cover.jpg"
+          type: "url"
+      - name: "comments"
+        field:
+          element: "checkbox"
+          label: "Enable comments"
+          help: "This will enable comments for the post"
+          value: false
+
+months:
+  ru:
+    - Января
+    - Февраля
+    - Марта
+    - Апреля
+    - Мая
+    - Июня
+    - Июля
+    - Августа
+    - Сентября
+    - Октября
+    - Ноября
+    - Декабря
+
+t:
+  en:
+    home: "Home"
+    about: "About"
+    events: "Events"
+    programs: "Programs"
+  ru:
+    home: "Главная"
+    about: "О нас"
+    events: "События"
+    programs: "Программы"

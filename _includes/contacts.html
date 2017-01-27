@@ -1,0 +1,92 @@
+<section id="contacts" class="section section--contacts">
+
+<div class="centered">
+<form class="section-contact-form" action="https://formspree.io/proakpp@mail.ru" method="POST">
+	<h3 class="section-contact-form-title">Связаться с нами</h3>
+	<input class="section-contact-form-input" placeholder="Имя" type="text" name="name">
+	<input class="section-contact-form-input" placeholder="Эл. почта" type="email" name="_replyto">
+	<textarea class="section-contact-form-input" placeholder="Сообщение" name="message"></textarea>
+	<input class="section-contact-form-submit button button--outline" type="submit" value="Отправить">
+</form>
+</div>
+
+<div id="map" class="section-map"></div>
+
+
+<script type="text/javascript">
+	function initMap() {
+		// Basic options for a simple Google Map
+		// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+		var mapOptions = {
+			// How zoomed in you want the map to start at (always required)
+			zoom: 13,
+			scrollwheel: false,
+			navigationControl: false,
+			mapTypeControl: false,
+			fullscreenControl: false,
+		    backgroundColor: '#131314',
+
+			// The latitude and longitude to center the map (always required)
+			center: new google.maps.LatLng(59.9384953,30.4666885),
+
+			// How you would like to style the map.
+			// This is where you would paste any style found on Snazzy Maps.
+			styles: [{"stylers":[{"visibility":"simplified"}]},{"stylers":[{"color":"#131314"}]},{"featureType":"water","stylers":[{"color":"#131313"},{"lightness":7}]},{"elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":25}]}]
+		};
+
+		// Get the HTML DOM element that will contain your map
+		// We are using a div with id="map" seen below in the <body>
+		var mapElement = document.getElementById('map');
+
+		// Create the Google Map using our element and options defined above
+		var map = new google.maps.Map(mapElement, mapOptions);
+
+		// Let's also add a marker while we're at it
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(59.9384953,30.4666885),
+			map: map,
+			title: 'PROAKPP'
+		});
+
+		var contentString = `<div class="section-map-content">
+			<h2 class="section-map-title">PRO<strong>AKPP</strong></h2>
+			<address class="section-map-address">
+				ул. Передовиков 8А, Санкт-Петербург<br/>
+				195426<br/>
+				<a href="http://maps.google.com/?q=ул. Передовиков 8А, Санкт-Петербург">Показать на картах гугл</a>
+			</address>
+
+			<h3 class="section-map-subtitle">Телефон:</h3>
+			<p class="section-map-phone">
+				<a href="tel:9168633">916-86-33</a>, Павел<br/>
+				<a href="tel:+79992166876">+7 999-216-68-76</a>, Антон<br/>
+			</p>
+
+			<h3 class="section-map-subtitle">Почта:</h3>
+			<p class="section-map-email">
+				<a href="mailto:proakpp@mail.ru">proakpp@mail.ru</a>
+			</p>
+
+			<p>
+			<br/>
+			<i class="fa fa-instagram" aria-hidden="true" style="color: black"></i>&nbsp;<a href="https://www.instagram.com/proakpp/" title="Instagram">ProАКПП</a>&nbsp;&nbsp;&nbsp;
+			<i class="fa fa-vk" aria-hidden="true" style="color: black"></i>&nbsp;<a href="https://vk.com/proakpp" title="Vkontakte">proakpp</a>
+			</p>
+        </div>`;
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+    	map.panBy(200, -150);
+        setTimeout(function () {
+	        infowindow.open(map, marker);
+        }, 1000)
+	}
+</script>
+
+</section>

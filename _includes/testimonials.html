@@ -1,0 +1,111 @@
+<section id="testimonials" class="section section--testimonials">
+	<div class="centered">
+		<header class="section-header">
+			<h3 class="section-title" data-lang="en" data-aos="fade-up">Наши клиенты</h3>
+			<hr class="section-dash" data-aos="fade-up" data-aos-delay="100"/>
+		</header>
+		<div class="swiper-container section-testimonials" data-aos="fade-up" data-aos-delay="200">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide section-testimonial">
+					<div class="section-testimonial-text">
+						«Отличный сервис! Позвонил, записался, приехал, меня уже ждут! При мне произвели осмотр, выявили причину с которой я обратился(обращался и в другие СТО, где помочь не смогли). Отдельное спасибо, мастерам Павлу и Антону! Теперь являюсь постоянным клиентом!»
+					</div>
+					<div class="section-testimonial-author">
+						<a href="https://vk.com/id75818461" class="section-testimonial-link">
+							<img src="./assets/testimonial-2.jpg" class="section-testimonial-image"/>
+							<div class="section-testimonial-name">Евгений Бибиков</div>
+							<div class="section-testimonial-bio">ОАО Газпром<br/>Mitsubishi Outlander XL</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide section-testimonial">
+					<div class="section-testimonial-text">
+						«Сделали все быстро и за разумные деньги! Спасибо большое, всем буду советовать Ваш сервис!»
+					</div>
+					<div class="section-testimonial-author">
+						<a href="https://vk.com/dmitriy21" class="section-testimonial-link">
+							<img src="./assets/testimonial-5.png" class="section-testimonial-image"/>
+							<div class="section-testimonial-name">Дмитрий Дорофеев</div>
+							<div class="section-testimonial-bio">Предприниматель<br/>BMW 3-й серии</div>
+						</a>
+					</div>
+				</div>
+				<div class="swiper-slide section-testimonial">
+					<div class="section-testimonial-text">
+						«Являюсь уже постояным клиентом, всем довольна, всегда все быстро и качественно!!»
+					</div>
+					<div class="section-testimonial-author">
+						<a href="https://vk.com/ekkatrin" class="section-testimonial-link">
+							<img src="./assets/testimonial-4.jpg" class="section-testimonial-image"/>
+							<div class="section-testimonial-name">Екатерина Колокольцева</div>
+							<div class="section-testimonial-bio">Домохозяйка<br/>Kia Ceed</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide section-testimonial">
+					<div class="section-testimonial-text">
+						«25 марта забрали из сервиса наш Nissan Qashqai после ремонта вариатора, подвески и в подарок сделали трапецию. Все отлично работает. Дали гарантию полгода на вариатор. Доброжелательное отношение. Остались очень довольны. Спасибо!»
+					</div>
+					<div class="section-testimonial-author">
+						<a href="https://vk.com/furman88" class="section-testimonial-link">
+							<img src="./assets/testimonial-3.jpg" class="section-testimonial-image"/>
+							<div class="section-testimonial-name">Владимир Фурман</div>
+							<div class="section-testimonial-bio">Инженер<br/>Nissan Quashqai</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide section-testimonial">
+					<div class="section-testimonial-text">
+						«В любой работе самое главное это ответственность за результат и качество её выполнения. Доверяю свою машину Павлу и не боюсь за неё, у этого человека есть все вышеперечисленные качества ! Спасибо Павел твой сервис это мой выбор, впрочем тебе лично я это уже говорил :) Удачи во всем!»
+					</div>
+					<div class="section-testimonial-author">
+						<a href="https://vk.com/id2726895" class="section-testimonial-link">
+							<img src="./assets/testimonial-1.png" class="section-testimonial-image"/>
+							<div class="section-testimonial-name">Александр Егоров</div>
+							<div class="section-testimonial-bio">Фрилансер<br/>Nissan Tiana</div>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="swiper-pagination"></div>
+
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function () {
+			//init testimonials slider
+			var mySwiper = new Swiper ('.section-testimonials', {
+				direction: 'horizontal',
+				loop: true,
+
+				// If we need pagination
+				pagination: '.section-testimonials .swiper-pagination',
+
+				// Navigation arrows
+				nextButton: '.section-testimonials .swiper-button-next',
+				prevButton: '.section-testimonials .swiper-button-prev',
+
+				effect: 'coverflow',
+				grabCursor: true,
+				centeredSlides: true,
+				slidesPerView: 'auto',
+				coverflow: {
+					rotate: 10,
+					stretch: 0,
+					depth: 100,
+					modifier: 0,
+					slideShadows: false
+				}
+			})
+		})
+	</script>
+</section>

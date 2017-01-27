@@ -1,0 +1,37 @@
+<section id="articles" class="section section--articles section--gray">
+	<div class="centered">
+		<header class="section-header">
+			<h3 class="section-title" data-lang="en" data-aos="fade-up">Полезно знать</h3>
+			<hr class="section-dash" data-aos="fade-up" data-aos-delay="100"/>
+			<p class="section-subtitle" data-lang="en" data-aos="fade-up" data-aos-delay="200">Знания, которые вам помогут снизить расходы и&nbsp;продлить срок службы вашего автомобиля</p>
+		</header>
+
+		<div class="section-articles" data-aos="fade-up" data-aos-delay="300">
+			{% for post in site.posts %}<article class="section-article" itemscope itemtype="http://schema.org/BlogPosting" {% if post.hidden %}hidden{% endif %}>
+				<a class="section-article-link" href="{{ post.url | prepend: site.baseurl }}">
+					{% if post.image %}
+					<figure class="section-article-figure">
+						<img class="section-article-image" src="{{ post.image }}" alt="{{ post.title }}"/>
+					</figure>
+					{% endif %}
+					<h4 class="section-article-title">{{ post.title }}</h4>
+				</a>
+				<time class="section-article-date" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+					{{ post.date | date: "%-d" }}
+					{% assign m = post.date | date: "%-m" | minus: 1 %}
+					{{ site.months.ru[m] }}
+					{{ post.date | date: "%Y" }}
+				</time>
+				<div class="section-article-excerpt">
+					{{ post.excerpt | strip_html | truncatewords: 22 }}
+				</div>
+			</article>{% endfor %}
+		</div>
+
+		<!--
+		<footer class="section-footer">
+			<button class="button">Показать еще</button>
+		</footer>
+		-->
+	</div>
+</section>

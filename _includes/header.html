@@ -1,0 +1,22 @@
+<header class="site-header">
+	<div class="centered">
+		<a class="site-logo" href="{{ site.baseurl }}/"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;PRO<strong>AKPP</strong></a>
+
+		<!--
+		<nav class="site-lang">
+			{% if lang != 'en' %}<a href="./">English</a>{% endif %}
+			{% if lang != 'fr' %}<a href="./fr">Français</a>{% endif %}
+			{% if lang != 'ru' %}<a href="./ru">Русский</a>{% endif %}
+		</nav>
+		-->
+
+		<nav class="site-nav">
+			<a class="site-nav-link" href="{% if layout.type %}/{% endif %}#services">Услуги</a>
+			<a class="site-nav-link" href="{% if layout.type %}/{% endif %}#about">О нас</a>
+			<a class="site-nav-link" href="{% if layout.type %}/{% endif %}#contacts">Контакты</a>
+			<span class="site-nav-divider">|</span>
+			<a href="https://www.instagram.com/proakpp/" title="Instagram" class="site-nav-link site-nav-link--social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+			<a href="https://vk.com/proakpp" title="Vkontakte" class="site-nav-link site-nav-link--social"><i class="fa fa-vk" aria-hidden="true"></i></a>
+		</nav>
+	</div>
+</header>
